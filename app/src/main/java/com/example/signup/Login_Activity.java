@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class Login_Activity extends AppCompatActivity implements View.OnClickListener {
@@ -76,7 +75,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
         }
     }
     private void transitionToSocialMediaActivity(){
-        Intent intent = new Intent(Login_Activity.this, SOCIAL_MEDIA_ACTIVITY.class);
+        Intent intent = new Intent(Login_Activity.this, social_media_activity.class);
         startActivity(intent);
     }
 }
