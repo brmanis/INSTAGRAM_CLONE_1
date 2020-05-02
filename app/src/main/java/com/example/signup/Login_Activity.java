@@ -1,7 +1,5 @@
 package com.example.signup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -53,6 +53,12 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                                             user.getUsername() + " is Logged in Successfully",
                                             Toast.LENGTH_SHORT,FancyToast.SUCCESS,true).show();
                                             transitionToSocialMediaActivity();
+                                }else{
+
+                                    FancyToast.makeText(Login_Activity.this,
+                                            e.getMessage(),
+                                            Toast.LENGTH_SHORT,FancyToast.ERROR,true).show();
+                                    //transitionToSocialMediaActivity();
                                 }
                             }
                         });
