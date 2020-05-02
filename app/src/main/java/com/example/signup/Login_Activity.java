@@ -75,7 +75,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
         }
     }
     private void transitionToSocialMediaActivity(){
-        Intent intent = new Intent(Login_Activity.this, Activity_Social_Media.class);
+        Intent intent = new Intent(Login_Activity.this, Social_Media_Activity.class);
         startActivity(intent);
     }
 }
