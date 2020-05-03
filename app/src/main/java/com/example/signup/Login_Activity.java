@@ -68,6 +68,8 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.SIgnUP:
+                Intent intent = new Intent(Login_Activity.this, MainActivity.class);
+                startActivity(intent);
                 break;
         }
 
@@ -85,5 +87,6 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
     private void transitionToSocialMediaActivity(){
         Intent intent = new Intent(Login_Activity.this, Social_Media_Activity.class);
         startActivity(intent);
+        finish();
     }
 }

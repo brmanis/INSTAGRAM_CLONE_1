@@ -1,7 +1,5 @@
 package com.example.signup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +9,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.Parse;
 import com.parse.ParseException;
@@ -118,5 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             private void transitionToSocialMediaActivity(){
                 Intent intent = new Intent(MainActivity.this, Social_Media_Activity.class);
                 startActivity(intent);
+                finish();
             }
 }
